@@ -69,43 +69,41 @@ body {
   min-height: 100vh;
 }
 
-@layer utilities {
-  .teto-red {
-    color: var(--teto-red);
-  }
-  .bg-teto-red {
-    background-color: var(--teto-red);
-  }
-  .teto-blue {
-    color: var(--teto-blue);
-  }
-  .bg-teto-blue {
-    background-color: var(--teto-blue);
-  }
-  .egen-purple {
-    color: var(--egen-purple);
-  }
-  .bg-egen-purple {
-    background-color: var(--egen-purple);
-  }
-  .egen-yellow {
-    color: var(--egen-yellow);
-  }
-  .bg-egen-yellow {
-    background-color: var(--egen-yellow);
-  }
-  .korean-blue {
-    color: var(--korean-blue);
-  }
-  .bg-korean-blue {
-    background-color: var(--korean-blue);
-  }
-  .korean-green {
-    color: var(--korean-green);
-  }
-  .bg-korean-green {
-    background-color: var(--korean-green);
-  }
+.teto-red {
+  color: var(--teto-red);
+}
+.bg-teto-red {
+  background-color: var(--teto-red);
+}
+.teto-blue {
+  color: var(--teto-blue);
+}
+.bg-teto-blue {
+  background-color: var(--teto-blue);
+}
+.egen-purple {
+  color: var(--egen-purple);
+}
+.bg-egen-purple {
+  background-color: var(--egen-purple);
+}
+.egen-yellow {
+  color: var(--egen-yellow);
+}
+.bg-egen-yellow {
+  background-color: var(--egen-yellow);
+}
+.korean-blue {
+  color: var(--korean-blue);
+}
+.bg-korean-blue {
+  background-color: var(--korean-blue);
+}
+.korean-green {
+  color: var(--korean-green);
+}
+.bg-korean-green {
+  background-color: var(--korean-green);
 }
 
 /* Custom animations */
