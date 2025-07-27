@@ -56,19 +56,17 @@
   --radius: 0.5rem;
 }
 
-@layer base {
-  * {
-    border-color: hsl(20, 5.9%, 90%);
-  }
+* {
+  border-color: hsl(20, 5.9%, 90%);
+}
 
-  body {
-    font-family: ui-sans-serif, system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background: linear-gradient(to bottom right, #eff6ff, #faf5ff, #fdf2f8);
-    color: hsl(20, 14.3%, 4.1%);
-    min-height: 100vh;
-  }
+body {
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to bottom right, #eff6ff, #faf5ff, #fdf2f8);
+  color: hsl(20, 14.3%, 4.1%);
+  min-height: 100vh;
 }
 
 @layer utilities {
