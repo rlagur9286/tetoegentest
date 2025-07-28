@@ -94,173 +94,25 @@ export default function Results() {
           <div className="bg-gradient-to-b from-blue-50 to-purple-50 py-8">
             <div className="text-center mb-6">
               <div className="inline-block bg-white rounded-2xl p-6 shadow-lg border-2 border-gray-200">
-                {/* SVG 캐릭터 그림 */}
+                {/* 성격 유형 이미지 */}
                 <div className="mb-4">
-                  {personalityType === 'egen_male' ? (
-                    // 에겐남: 부드럽고 온화한 남성
-                    <svg width="140" height="140" viewBox="0 0 140 140" className="mx-auto">
-                      {/* 얼굴 */}
-                      <circle cx="70" cy="50" r="32" fill="#FDBCB4" stroke="#F2A191" strokeWidth="2"/>
-                      {/* 머리카락 (부드러운 단발) */}
-                      <path d="M38 35 Q42 20 55 22 Q65 18 75 22 Q85 20 102 35 Q95 25 85 30 Q75 25 65 30 Q55 25 45 30 Q38 25 38 35" fill="#4A3E2A"/>
-                      <path d="M45 32 Q55 28 65 32 Q75 28 85 32 Q80 40 70 42 Q60 40 55 35 Q50 40 45 32" fill="#4A3E2A"/>
-                      {/* 온화한 눈 */}
-                      <ellipse cx="60" cy="45" rx="5" ry="6" fill="white"/>
-                      <ellipse cx="80" cy="45" rx="5" ry="6" fill="white"/>
-                      <circle cx="60" cy="45" r="3" fill="#5D4E37"/>
-                      <circle cx="80" cy="45" r="3" fill="#5D4E37"/>
-                      <circle cx="61" cy="43" r="1" fill="white"/>
-                      <circle cx="81" cy="43" r="1" fill="white"/>
-                      {/* 부드러운 눈썹 */}
-                      <path d="M55 40 Q60 38 65 40" stroke="#4A3E2A" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                      <path d="M75 40 Q80 38 85 40" stroke="#4A3E2A" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                      {/* 미소 */}
-                      <path d="M63 58 Q70 62 77 58" stroke="#D4756B" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                      {/* 목 */}
-                      <rect x="63" y="82" width="14" height="12" fill="#FDBCB4"/>
-                      {/* 베이지 스웨터 */}
-                      <ellipse cx="70" cy="110" rx="20" ry="16" fill="#E6D2B5"/>
-                      {/* 팔 */}
-                      <ellipse cx="45" cy="105" rx="8" ry="14" fill="#FDBCB4"/>
-                      <ellipse cx="95" cy="105" rx="8" ry="14" fill="#FDBCB4"/>
-                      <ellipse cx="45" cy="100" rx="10" ry="8" fill="#E6D2B5"/>
-                      <ellipse cx="95" cy="100" rx="10" ry="8" fill="#E6D2B5"/>
-                      {/* 향수병 (손에 들고 있음) */}
-                      <rect x="42" y="90" width="6" height="8" rx="1" fill="#B8860B"/>
-                      <rect x="43" y="88" width="4" height="3" fill="#FFD700"/>
-                      <circle cx="45" cy="87" r="1" fill="#DAA520"/>
-                    </svg>
-                  ) : personalityType === 'egen_female' ? (
-                    // 에겐녀: 따뜻하고 차분한 여성
-                    <svg width="140" height="140" viewBox="0 0 140 140" className="mx-auto">
-                      {/* 얼굴 */}
-                      <circle cx="70" cy="50" r="32" fill="#FDBCB4" stroke="#F2A191" strokeWidth="2"/>
-                      {/* 머리카락 (웨이브 긴 머리) */}
-                      <path d="M38 40 Q35 25 45 22 Q55 18 65 22 Q75 18 85 22 Q95 25 102 40 Q98 30 88 35 Q78 30 70 35 Q62 30 52 35 Q42 30 38 40" fill="#8B4513"/>
-                      <path d="M35 45 Q32 35 38 40 Q45 45 48 55" fill="#8B4513"/>
-                      <path d="M105 45 Q108 35 102 40 Q95 45 92 55" fill="#8B4513"/>
-                      {/* 앞머리 */}
-                      <path d="M48 35 Q58 30 68 35 Q78 30 88 35 Q83 42 75 45 Q70 42 65 45 Q60 42 55 45 Q50 42 48 35" fill="#8B4513"/>
-                      {/* 따뜻한 눈 */}
-                      <ellipse cx="60" cy="46" rx="6" ry="7" fill="white"/>
-                      <ellipse cx="80" cy="46" rx="6" ry="7" fill="white"/>
-                      <circle cx="60" cy="46" r="4" fill="#654321"/>
-                      <circle cx="80" cy="46" r="4" fill="#654321"/>
-                      <circle cx="61" cy="44" r="1.5" fill="white"/>
-                      <circle cx="81" cy="44" r="1.5" fill="white"/>
-                      {/* 자연스러운 속눈썹 */}
-                      <path d="M54 42 L56 40" stroke="#333" strokeWidth="1"/>
-                      <path d="M58 41 L60 39" stroke="#333" strokeWidth="1"/>
-                      <path d="M62 41 L64 39" stroke="#333" strokeWidth="1"/>
-                      <path d="M66 42 L68 40" stroke="#333" strokeWidth="1"/>
-                      <path d="M72 42 L74 40" stroke="#333" strokeWidth="1"/>
-                      <path d="M76 41 L78 39" stroke="#333" strokeWidth="1"/>
-                      <path d="M80 41 L82 39" stroke="#333" strokeWidth="1"/>
-                      <path d="M84 42 L86 40" stroke="#333" strokeWidth="1"/>
-                      {/* 자연스러운 미소 */}
-                      <path d="M63 58 Q70 61 77 58" stroke="#D4756B" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                      {/* 목걸이 */}
-                      <ellipse cx="70" cy="78" rx="25" ry="3" fill="none" stroke="#FFD700" strokeWidth="1"/>
-                      <circle cx="70" cy="76" r="2" fill="#FFD700"/>
-                      {/* 목 */}
-                      <rect x="63" y="82" width="14" height="12" fill="#FDBCB4"/>
-                      {/* 핑크 카디건 */}
-                      <ellipse cx="70" cy="110" rx="22" ry="16" fill="#F8BBD9"/>
-                      {/* 팔 */}
-                      <ellipse cx="43" cy="105" rx="8" ry="14" fill="#FDBCB4"/>
-                      <ellipse cx="97" cy="105" rx="8" ry="14" fill="#FDBCB4"/>
-                      <ellipse cx="43" cy="100" rx="10" ry="8" fill="#F8BBD9"/>
-                      <ellipse cx="97" cy="100" rx="10" ry="8" fill="#F8BBD9"/>
-                      {/* 커피컵 */}
-                      <ellipse cx="45" cy="95" rx="4" ry="6" fill="#8B4513"/>
-                      <ellipse cx="45" cy="92" rx="4" ry="2" fill="#D2691E"/>
-                      <path d="M49 95 Q52 95 52 98 Q52 100 49 100" stroke="#8B4513" strokeWidth="1" fill="none"/>
-                    </svg>
-                  ) : personalityType === 'teto_male' ? (
-                    // 테토남: 강인하고 카리스마 있는 남성
-                    <svg width="140" height="140" viewBox="0 0 140 140" className="mx-auto">
-                      {/* 얼굴 (각진 턱) */}
-                      <path d="M70 22 Q85 22 95 35 L92 60 Q88 75 70 75 Q52 75 48 60 L45 35 Q55 22 70 22" fill="#E5B087" stroke="#D49A6A" strokeWidth="2"/>
-                      {/* 머리카락 (스파이크 헤어) */}
-                      <path d="M45 32 L48 15 L52 25 L56 12 L60 22 L64 10 L68 20 L72 10 L76 22 L80 12 L84 25 L88 15 L95 32 Q88 28 70 30 Q52 28 45 32" fill="#1A1A1A"/>
-                      {/* 강렬한 눈 */}
-                      <path d="M55 42 L65 44 L63 48 L57 46 Z" fill="white"/>
-                      <path d="M75 44 L85 42 L83 46 L77 48 Z" fill="white"/>
-                      <circle cx="60" cy="45" r="3" fill="#2C1810"/>
-                      <circle cx="80" cy="45" r="3" fill="#2C1810"/>
-                      <circle cx="61" cy="43" r="1" fill="white"/>
-                      <circle cx="81" cy="43" r="1" fill="white"/>
-                      {/* 굵은 눈썹 */}
-                      <path d="M53 38 Q62 36 67 39" stroke="#1A1A1A" strokeWidth="3" fill="none" strokeLinecap="round"/>
-                      <path d="M73 39 Q78 36 87 38" stroke="#1A1A1A" strokeWidth="3" fill="none" strokeLinecap="round"/>
-                      {/* 진한 표정 */}
-                      <path d="M63 58 Q70 60 77 58" stroke="#B8956A" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                      {/* 굵은 목 */}
-                      <rect x="60" y="75" width="20" height="15" fill="#E5B087"/>
-                      {/* 네이비 폴로셔츠 */}
-                      <ellipse cx="70" cy="115" rx="25" ry="18" fill="#1B3A57"/>
-                      <path d="M60 100 L80 100 L78 108 L62 108 Z" fill="#1B3A57"/>
-                      <circle cx="65" cy="103" r="1" fill="#C0C0C0"/>
-                      <circle cx="70" cy="103" r="1" fill="#C0C0C0"/>
-                      <circle cx="75" cy="103" r="1" fill="#C0C0C0"/>
-                      {/* 근육질 팔 */}
-                      <ellipse cx="40" cy="108" rx="10" ry="16" fill="#E5B087"/>
-                      <ellipse cx="100" cy="108" rx="10" ry="16" fill="#E5B087"/>
-                      <ellipse cx="40" cy="102" rx="12" ry="10" fill="#1B3A57"/>
-                      <ellipse cx="100" cy="102" rx="12" ry="10" fill="#1B3A57"/>
-                      {/* 근육 라인 */}
-                      <path d="M35 100 Q40 105 35 118" stroke="#D49A6A" strokeWidth="2" fill="none"/>
-                      <path d="M105 100 Q100 105 105 118" stroke="#D49A6A" strokeWidth="2" fill="none"/>
-                      {/* 시계 */}
-                      <circle cx="95" cy="120" r="5" fill="#2C2C2C"/>
-                      <circle cx="95" cy="120" r="3" fill="white"/>
-                      <line x1="95" y1="120" x2="95" y2="118" stroke="#2C2C2C" strokeWidth="1"/>
-                      <line x1="95" y1="120" x2="97" y2="120" stroke="#2C2C2C" strokeWidth="1"/>
-                    </svg>
-                  ) : (
-                    // 테토녀: 강인하고 시크한 여성
-                    <svg width="140" height="140" viewBox="0 0 140 140" className="mx-auto">
-                      {/* 얼굴 */}
-                      <path d="M70 25 Q82 25 90 38 L88 58 Q85 70 70 70 Q55 70 52 58 L50 38 Q58 25 70 25" fill="#E5B087" stroke="#D49A6A" strokeWidth="2"/>
-                      {/* 머리카락 (시크한 단발) */}
-                      <path d="M50 35 Q48 22 58 20 Q68 18 78 20 Q88 22 90 35 Q85 25 75 28 Q70 25 65 28 Q55 25 50 35" fill="#1A1A1A"/>
-                      <path d="M48 40 Q45 35 50 35 Q55 40 58 48" fill="#1A1A1A"/>
-                      <path d="M92 40 Q95 35 90 35 Q85 40 82 48" fill="#1A1A1A"/>
-                      {/* 강렬한 눈 */}
-                      <path d="M56 43 L64 44 L62 47 L58 46 Z" fill="white"/>
-                      <path d="M76 44 L84 43 L82 46 L78 47 Z" fill="white"/>
-                      <circle cx="60" cy="45" r="3" fill="#2C1810"/>
-                      <circle cx="80" cy="45" r="3" fill="#2C1810"/>
-                      <circle cx="61" cy="43" r="1" fill="white"/>
-                      <circle cx="81" cy="43" r="1" fill="white"/>
-                      {/* 날카로운 눈썹 */}
-                      <path d="M54 40 Q62 38 66 41" stroke="#1A1A1A" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                      <path d="M74 41 Q78 38 86 40" stroke="#1A1A1A" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                      {/* 시크한 표정 */}
-                      <path d="M64 58 Q70 59 76 58" stroke="#B8956A" strokeWidth="2" fill="none" strokeLinecap="round"/>
-                      {/* 목 */}
-                      <rect x="63" y="70" width="14" height="12" fill="#E5B087"/>
-                      {/* 검은 가죽 재킷 */}
-                      <ellipse cx="70" cy="110" rx="24" ry="18" fill="#1A1A1A"/>
-                      <path d="M55 95 L85 95 L83 105 L57 105 Z" fill="#1A1A1A"/>
-                      <rect x="65" y="98" width="10" height="8" fill="#333"/>
-                      <circle cx="70" cy="102" r="2" fill="#C0C0C0"/>
-                      {/* 팔 (가죽 재킷) */}
-                      <ellipse cx="42" cy="105" rx="9" ry="15" fill="#E5B087"/>
-                      <ellipse cx="98" cy="105" rx="9" ry="15" fill="#E5B087"/>
-                      <ellipse cx="42" cy="100" rx="11" ry="10" fill="#1A1A1A"/>
-                      <ellipse cx="98" cy="100" rx="11" ry="10" fill="#1A1A1A"/>
-                      {/* 재킷 디테일 */}
-                      <circle cx="38" cy="95" r="1" fill="#C0C0C0"/>
-                      <circle cx="102" cy="95" r="1" fill="#C0C0C0"/>
-                      {/* 목걸이 */}
-                      <ellipse cx="70" cy="85" rx="18" ry="2" fill="none" stroke="#C0C0C0" strokeWidth="1"/>
-                      <path d="M68 83 Q70 85 72 83" stroke="#C0C0C0" strokeWidth="2" fill="none"/>
-                      {/* 시크한 포즈 (팔짱) */}
-                      <path d="M42 110 Q48 115 55 110" stroke="#1A1A1A" strokeWidth="3" fill="none"/>
-                      <path d="M98 110 Q92 115 85 110" stroke="#1A1A1A" strokeWidth="3" fill="none"/>
-                    </svg>
-                  )}
+                  <img 
+                    src={result.image} 
+                    alt={result.type} 
+                    className="w-32 h-32 object-cover rounded-full border-4 border-gray-200 shadow-lg mx-auto"
+                    onError={(e) => {
+                      // If image fails to load, replace with emoji
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                      const parent = target.parentElement;
+                      if (parent) {
+                        const emojiDiv = document.createElement('div');
+                        emojiDiv.className = 'text-8xl mb-4 animate-bounce-slow drop-shadow-lg';
+                        emojiDiv.textContent = result.emoji;
+                        parent.appendChild(emojiDiv);
+                      }
+                    }}
+                  />
                 </div>
                 <div className="bg-gray-100 rounded-xl p-3 max-w-xs mx-auto">
                   <p className="text-sm font-medium text-gray-700 leading-relaxed">
