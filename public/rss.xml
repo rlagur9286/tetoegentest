@@ -3,25 +3,33 @@
   <channel>
     <title>테토-에겐 성격 테스트</title>
     <link>https://tetoegen-test.vercel.app/</link>
-    <description>테스토스테론과 에스트로겐 특성으로 분석하는 새로운 성격 유형 테스트</description>
+    <description>테스토스테론과 에스트로겐 특성으로 분석하는 새로운 성격 유형 테스트. 테토남, 테토녀, 에겐남, 에겐녀 중 당신의 유형을 찾아보세요.</description>
     <language>ko</language>
-    <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 15 Jan 2024 00:00:00 +0900</lastBuildDate>
     <atom:link href="https://tetoegen-test.vercel.app/rss.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>테토-에겐 성격 테스트 시작하기</title>
       <link>https://tetoegen-test.vercel.app/</link>
-      <description>나의 연애 DNA를 찾아보세요! 3분만에 완성되는 심리 테스트</description>
-      <pubDate>Mon, 01 Jan 2024 00:00:00 +0900</pubDate>
+      <description>나의 연애 DNA를 찾아보세요! 3분만에 완성되는 심리 테스트. 테스토스테론과 에스트로겐 특성으로 분석하는 새로운 성격 유형 테스트입니다.</description>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0900</pubDate>
       <guid>https://tetoegen-test.vercel.app/</guid>
     </item>
     
     <item>
       <title>성격 유형 결과 확인</title>
       <link>https://tetoegen-test.vercel.app/results</link>
-      <description>테토남, 테토녀, 에겐남, 에겐녀 중 당신의 성격 유형을 확인해보세요</description>
-      <pubDate>Mon, 01 Jan 2024 00:00:00 +0900</pubDate>
+      <description>테토남, 테토녀, 에겐남, 에겐녀 중 당신의 성격 유형을 확인해보세요. 각 유형별 상세한 분석과 특징을 제공합니다.</description>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0900</pubDate>
       <guid>https://tetoegen-test.vercel.app/results</guid>
+    </item>
+    
+    <item>
+      <title>심리 테스트 시작</title>
+      <link>https://tetoegen-test.vercel.app/quiz</link>
+      <description>3분만에 완성되는 심리 테스트로 당신의 연애 스타일과 성격을 알아보세요.</description>
+      <pubDate>Mon, 15 Jan 2024 00:00:00 +0900</pubDate>
+      <guid>https://tetoegen-test.vercel.app/quiz</guid>
     </item>
   </channel>
 </rss> 
