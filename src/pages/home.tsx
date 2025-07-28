@@ -72,28 +72,32 @@ export default function Home() {
             <h3 className="text-xl font-bold text-center mb-6">🔮 4가지 성격 유형</h3>
             <div className="grid grid-cols-2 gap-4">
               <PersonalityCard
-                emoji="🦁"
+                emoji=""
                 title="테토남"
                 description="리더십 강한 남성"
                 colorClass="from-red-500 to-orange-500"
+                image="/테토남.png"
               />
               <PersonalityCard
-                emoji="🎨"
+                emoji=""
                 title="에겐남"
                 description="감성적인 남성"
                 colorClass="from-purple-500 to-pink-500"
+                image="/에겐남.png"
               />
               <PersonalityCard
-                emoji="⚡"
+                emoji=""
                 title="테토녀"
                 description="활발한 여성"
                 colorClass="from-teal-500 to-blue-500"
+                image="/테토녀.png"
               />
               <PersonalityCard
-                emoji="🌺"
+                emoji=""
                 title="에겐녀"
                 description="온화한 여성"
                 colorClass="from-pink-500 to-rose-500"
+                image="/에겐녀.png"
               />
             </div>
           </div>

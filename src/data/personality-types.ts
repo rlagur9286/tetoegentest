@@ -1,6 +1,7 @@
 export interface PersonalityType {
   type: string;
   emoji: string;
+  image: string;
   colorClass: string;
   bgGradient: string;
   title: string;
@@ -17,6 +18,7 @@ export const personalityTypes: Record<string, PersonalityType> = {
   "teto_male": {
     type: "테토남",
     emoji: "🦁",
+    image: "/테토남.png",
     colorClass: "from-red-500 to-orange-500",
     bgGradient: "bg-gradient-to-r from-red-500 to-orange-500",
     title: "리더십이 강한 남성형",
@@ -37,6 +39,7 @@ export const personalityTypes: Record<string, PersonalityType> = {
   "egen_male": {
     type: "에겐남",
     emoji: "🎨",
+    image: "/에겐남.png",
     colorClass: "from-purple-500 to-pink-500",
     bgGradient: "bg-gradient-to-r from-purple-500 to-pink-500",
     title: "감성이 풍부한 남성형",
@@ -57,6 +60,7 @@ export const personalityTypes: Record<string, PersonalityType> = {
   "teto_female": {
     type: "테토녀", 
     emoji: "⚡",
+    image: "/테토녀.png",
     colorClass: "from-teal-500 to-blue-500",
     bgGradient: "bg-gradient-to-r from-teal-500 to-blue-500",
     title: "활발하고 독립적인 여성형",
@@ -77,6 +81,7 @@ export const personalityTypes: Record<string, PersonalityType> = {
   "egen_female": {
     type: "에겐녀",
     emoji: "🌺", 
+    image: "/에겐녀.png",
     colorClass: "from-pink-500 to-rose-500",
     bgGradient: "bg-gradient-to-r from-pink-500 to-rose-500",
     title: "온화하고 배려심 많은 여성형",

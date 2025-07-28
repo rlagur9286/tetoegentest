@@ -67,7 +67,13 @@ export default function Results() {
             <div className="absolute inset-0 bg-black bg-opacity-10"></div>
             <div className="relative z-10">
               <h2 className="text-3xl font-black mb-2 pixel-style tracking-wider">{result.type}</h2>
-              <div className="text-8xl mb-4 animate-bounce-slow drop-shadow-lg">{result.emoji}</div>
+              <div className="flex justify-center mb-4">
+                <img 
+                  src={result.image} 
+                  alt={result.type} 
+                  className="w-24 h-24 object-cover rounded-full border-4 border-white shadow-lg animate-bounce-slow"
+                />
+              </div>
               <p className="text-xl font-medium opacity-90">{result.title}</p>
             </div>
           </div>
