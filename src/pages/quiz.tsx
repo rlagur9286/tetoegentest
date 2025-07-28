@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import { useLocation } from "wouter";
-import { questions, genderQuestion } from "@/data/questions";
+import { genderQuestion } from "@/data/questions";
 import { QuizQuestionComponent } from "@/components/quiz-question";
 import { ProgressBar } from "@/components/progress-bar";
 import { useQuiz } from "@/hooks/use-quiz";
 
 export default function Quiz() {
   const [, setLocation] = useLocation();
-  const { currentQuestion, selectAnswer, goToResults } = useQuiz();
+  const { currentQuestion, shuffledQuestions, selectAnswer, goToResults } = useQuiz();
   
-  const totalQuestions = questions.length + 1; // +1 for gender question
+  const totalQuestions = shuffledQuestions.length + 1; // +1 for gender question
 
   useEffect(() => {
     if (currentQuestion >= totalQuestions) {
@@ -34,8 +34,8 @@ export default function Quiz() {
     selectAnswer(value);
   };
 
-  const currentQuestionData = currentQuestion < questions.length 
-    ? questions[currentQuestion] 
+  const currentQuestionData = currentQuestion < shuffledQuestions.length 
+    ? shuffledQuestions[currentQuestion] 
     : genderQuestion;
 
   return (

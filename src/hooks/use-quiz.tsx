@@ -1,16 +1,33 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
+import { questions } from "@/data/questions";
 
 export interface QuizScores {
   teto: number;
   egen: number;
 }
 
+// Fisher-Yates shuffle algorithm
+function shuffleArray<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 export function useQuiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [scores, setScores] = useState<QuizScores>({ teto: 0, egen: 0 });
   const [gender, setGender] = useState<string | null>(null);
+  const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
   const [, setLocation] = useLocation();
+
+  // Shuffle questions on component mount
+  useEffect(() => {
+    setShuffledQuestions(shuffleArray(questions));
+  }, []);
 
   const selectAnswer = (value: string) => {
     if (value === "male" || value === "female") {
@@ -44,6 +61,7 @@ export function useQuiz() {
     setCurrentQuestion(0);
     setScores({ teto: 0, egen: 0 });
     setGender(null);
+    setShuffledQuestions(shuffleArray(questions));
     setLocation("/");
   };
 
@@ -51,6 +69,7 @@ export function useQuiz() {
     currentQuestion,
     scores,
     gender,
+    shuffledQuestions,
     selectAnswer,
     getPersonalityType,
     goToResults,
