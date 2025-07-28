@@ -72,6 +72,18 @@ export default function Results() {
                   src={result.image} 
                   alt={result.type} 
                   className="w-24 h-24 object-cover rounded-full border-4 border-white shadow-lg animate-bounce-slow"
+                  onError={(e) => {
+                    // If image fails to load, replace with emoji
+                    const target = e.target as HTMLImageElement;
+                    target.style.display = 'none';
+                    const parent = target.parentElement;
+                    if (parent) {
+                      const emojiDiv = document.createElement('div');
+                      emojiDiv.className = 'text-8xl mb-4 animate-bounce-slow drop-shadow-lg';
+                      emojiDiv.textContent = result.emoji;
+                      parent.appendChild(emojiDiv);
+                    }
+                  }}
                 />
               </div>
               <p className="text-xl font-medium opacity-90">{result.title}</p>

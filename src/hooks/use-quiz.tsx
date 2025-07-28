@@ -21,13 +21,8 @@ export function useQuiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [scores, setScores] = useState<QuizScores>({ teto: 0, egen: 0 });
   const [gender, setGender] = useState<string | null>(null);
-  const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>([]);
+  const [shuffledQuestions, setShuffledQuestions] = useState<typeof questions>(shuffleArray(questions));
   const [, setLocation] = useLocation();
-
-  // Shuffle questions on component mount
-  useEffect(() => {
-    setShuffledQuestions(shuffleArray(questions));
-  }, []);
 
   const selectAnswer = (value: string) => {
     if (value === "male" || value === "female") {
