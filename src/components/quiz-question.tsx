@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { QuizQuestion } from "@/data/questions";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -7,7 +8,24 @@ interface QuizQuestionProps {
   onAnswer: (value: string) => void;
 }
 
+// Fisher-Yates shuffle algorithm for options
+function shuffleOptions<T>(array: T[]): T[] {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
 export function QuizQuestionComponent({ question, onAnswer }: QuizQuestionProps) {
+  const [shuffledOptions, setShuffledOptions] = useState(question.options);
+
+  // Shuffle options when question changes
+  useEffect(() => {
+    setShuffledOptions(shuffleOptions(question.options));
+  }, [question.id]);
+
   return (
     <Card className="w-full max-w-3xl mx-auto bg-white rounded-3xl shadow-xl border border-gray-100 animate-fade-in">
       <CardContent className="p-8">
@@ -18,7 +36,7 @@ export function QuizQuestionComponent({ question, onAnswer }: QuizQuestionProps)
         </div>
         
         <div className="space-y-3">
-          {question.options.map((option, index) => (
+          {shuffledOptions.map((option, index) => (
             <Button
               key={index}
               onClick={() => onAnswer(option.value)}
