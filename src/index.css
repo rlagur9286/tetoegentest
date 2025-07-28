@@ -1,4 +1,4 @@
-/* Tailwind CSS base styles */
+/* Tailwind CSS base styles - Fixed for Vercel deployment */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
